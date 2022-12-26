@@ -2,12 +2,12 @@ import { View, Text, TextInput, Pressable, Image } from 'react-native'
 import React from 'react'
 import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 import { DancingScript_700Bold } from '@expo-google-fonts/dancing-script';
+import Icon from 'react-native-vector-icons/AntDesign';
 export default function Login() {
     let [fontsLoaded] = useFonts({
         Inter_900Black,
         DancingScript_700Bold,
     });
-
     if (!fontsLoaded) {
         return null;
     }
@@ -19,6 +19,7 @@ export default function Login() {
             </Text>
             <TextInput placeholder="Email " className="w-11/12 mx-auto bg-gray-200  h-12 rounded-lg pl-9" />
             <TextInput placeholder="Password" className="w-11/12 mx-auto bg-gray-200 h-12 rounded-lg pl-9" secureTextEntry={true} />
+            <Icon name="eye" size={12} />
             <Pressable name="Login" className="mx-auto w-3/5 h-12 bg-black rounded-lg " onPress={() => { console.log("Login succesfull!!") }}>
                 <Text className="text-white mx-auto my-auto ">LOGIN</Text>
             </Pressable>
@@ -34,6 +35,7 @@ export default function Login() {
                 className="bg-gray-200 h-10 w-11/12 mx-auto rounded-xl"><View className="flex flex-row space-x-2 mx-auto my-auto">
                     <Image source={{ uri: 'https://cdn-icons-png.flaticon.com/512/281/281764.png' }} className="w-7 h-7" />
                     <Text className="mx-auto my-auto font-semibold">Sign up with google</Text></View>
+
             </Pressable>
             <Pressable
                 onPress={() => { console.log("Apple!!!!") }}

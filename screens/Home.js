@@ -3,7 +3,8 @@ import React from 'react'
 import Navbar from '../components/Navbar';
 import { SearchBar } from 'react-native-screens';
 import ItemsSlider from '../components/ItemsSlider';
-import C from '../components/Carousel';
+
+import Sale from '../components/Sale';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Navbar />
             <ItemsSlider />
             {/* <C /> */}
+            <Sale />
         </View>
     )
 }
