@@ -14,13 +14,13 @@ export default function Login() {
 
     return (
         <View className="space-y-6">
-            <Text className="mx-auto mt-32 text-5xl " style={{ fontFamily: 'DancingScript_700Bold' }}>
+            <Text className="mx-auto mt-24 text-5xl " style={{ fontFamily: 'DancingScript_700Bold' }}>
                 Login
             </Text>
             <TextInput placeholder="Email " className="w-11/12 mx-auto bg-gray-200  h-12 rounded-lg pl-9" />
             <TextInput placeholder="Password" className="w-11/12 mx-auto bg-gray-200 h-12 rounded-lg pl-9" secureTextEntry={true} />
-            <Icon name="eye" size={12} />
-            <Pressable name="Login" className="mx-auto w-3/5 h-12 bg-black rounded-lg " onPress={() => { console.log("Login succesfull!!") }}>
+            <Icon name="eye" size={22} style={{ marginLeft: 'auto', marginRight: 25, bottom: 55, }} />
+            <Pressable name="Login" className="mx-auto w-3/5 h-12 bg-black rounded-lg bottom-4" onPress={() => { console.log("Login succesfull!!") }}>
                 <Text className="text-white mx-auto my-auto ">LOGIN</Text>
             </Pressable>
             <View className="flex flex-row w-11/12 mx-auto">

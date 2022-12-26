@@ -19,7 +19,7 @@ export default function App() {
         <Tabs />
       </NavigationContainer> */}
 
-      {/* <Home /> */}
+      <Home />
       {/* 
       <FlatList
         style={{ marginTop: 300, marginLeft: 'auto', marginRight: 'auto' }}
@@ -29,7 +29,7 @@ export default function App() {
         pagingEnabled={true}
         showsHorizontalScrollIndicator={false}
       /> */}
-      <Login />
+      {/* <Login /> */}
       <StatusBar style="auto" />
     </View>
   );
