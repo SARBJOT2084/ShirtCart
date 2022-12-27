@@ -10,7 +10,10 @@ function Box(props) {
                     <Image
                         className="object-cover h-5/6 mb-auto  rounded-t-lg"
                         source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMXpAouLrbt22rZiAVJCcmOFhu3EGcuV3lww&usqp=CAU' }} />
-                    <Text className="mb-auto ml-5 text-green-700 line-through">Rs.3400&nbsp;</Text>
+                    <View className="flex flex-row mb-auto px-4">
+                        <Text className="my-auto mx-auto">Starts Rs. 3000</Text>
+                    </View>
+
 
                 </View>
                 <View className="w-1/2">

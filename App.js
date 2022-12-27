@@ -20,15 +20,7 @@ export default function App() {
       </NavigationContainer> */}
 
       <Home />
-      {/* 
-      <FlatList
-        style={{ marginTop: 300, marginLeft: 'auto', marginRight: 'auto' }}
-        data={slides}
-        renderItem={({ item }) => <LL item={item} />}
-        horizontal={true}
-        pagingEnabled={true}
-        showsHorizontalScrollIndicator={false}
-      /> */}
+
       {/* <Login /> */}
       <StatusBar style="auto" />
     </View>
