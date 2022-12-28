@@ -12,23 +12,24 @@ const Tabs = () => {
                 screenOptions={({ route }) => ({
                     tabBarShowLabel: false,
                     tabBarStyle: {
-                        marginTop: 700,
+                        position: 'absolute',
+
                     },
 
-                    // tabBarIcon: ({ focused, color, size }) => {
-                    //     let iconName;
+                    tabBarIcon: ({ focused, color, size }) => {
+                        let iconName;
 
-                    //     if (route.name === 'Home') {
-                    //         iconName = focused
-                    //             ? 'ios-information-circle'
-                    //             : 'ios-information-circle-outline';
-                    //     } else if (route.name === 'Settings') {
-                    //         iconName = focused ? 'ios-list' : 'ios-list-outline';
-                    //     }
+                        if (route.name === 'Home') {
+                            iconName = focused
+                                ? 'ios-information-circle'
+                                : 'ios-information-circle-outline';
+                        } else if (route.name === 'Settings') {
+                            iconName = focused ? 'ios-list' : 'ios-list-outline';
+                        }
 
-                    //     // You can return any component that you like here!
-                    //     return <Ionicons name={iconName} size={size} color={color} />;
-                    // },
+                        // You can return any component that you like here!
+                        return <Ionicons name={iconName} size={size} color={color} />;
+                    },
                     tabBarActiveTintColor: 'tomato',
                     tabBarInactiveTintColor: 'gray',
                 })}
@@ -36,7 +37,7 @@ const Tabs = () => {
                 <Tab.Screen name="Home" component={Home}></Tab.Screen>
                 <Tab.Screen name="Product" component={Product} ></Tab.Screen>
             </Tab.Navigator>
-        </View >
+        </View>
     )
 }
 

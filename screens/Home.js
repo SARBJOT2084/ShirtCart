@@ -11,9 +11,11 @@ const Home = () => {
     return (
         <View>
             <Navbar />
-            
+            <View className=""></View>
             <Sale />
+            <View className="bg-rose-500 h-24">
 
+            </View>
         </View>
     )
 }
