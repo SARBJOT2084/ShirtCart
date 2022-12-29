@@ -13,9 +13,8 @@ export default function App() {
   return (
     <View>
 
-      {/* 
-      <Home /> */}
 
+      <Home />
       {/* <Login /> */}
 
 
@@ -24,7 +23,7 @@ export default function App() {
         <Tabs />
 
       </NavigationContainer> */}
-      <Slider />
+      {/* <Slider /> */}
       <StatusBar style="auto" />
     </View>
   );
