@@ -1,7 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View, FlatList, Image } from 'react-native';
-import CarouselCards from './screens/CarouselCards'
+import Slider from './components/Slider';
+
 import Tabs from './navigation/tabs';
 import Home from './screens/Home';
 import Login from './screens/Login';
@@ -12,27 +13,19 @@ export default function App() {
   return (
     <View>
 
-
-      {/* <Home /> */}
+      {/* 
+      <Home /> */}
 
       {/* <Login /> */}
 
-      <CarouselCards />
 
-      <NavigationContainer style={{ marginTop: 'auto', }}>
+
+      {/* <NavigationContainer style={{ marginTop: 'auto', }}>
         <Tabs />
 
-      </NavigationContainer>
+      </NavigationContainer> */}
+      <Slider />
       <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 50
-  },
-});
