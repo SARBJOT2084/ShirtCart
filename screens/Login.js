@@ -11,7 +11,7 @@ export default function Login() {
     if (!fontsLoaded) {
         return null;
     }
-
+3
     return (
         <View className="space-y-6">
             <Text className="mx-auto mt-24 text-5xl " style={{ fontFamily: 'DancingScript_700Bold' }}>
