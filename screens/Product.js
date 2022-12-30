@@ -85,8 +85,10 @@ const Product = () => {
     if (!fontsLoaded) {
         return null;
     }
+    {/**category section */}
     return (
-        <View className="mt-[30%]">
+        
+        <View className = "mt-[30%]" >
             <Text style={{ marginRight: 'auto', marginLeft: 'auto', fontFamily: 'Pacifico_400Regular', fontSize: 34, marginBottom: 34, }}>Categories</Text>
             <ScrollView>
                 <Text style={{ fontFamily: 'Montserrat400_Regular' }}>Casual</Text>
@@ -95,12 +97,12 @@ const Product = () => {
                 <FlatList data={others} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
 
             </ScrollView>
-            {/* <
+    {/* <
             <FlatList /> */}
-            {/* <FlatList data={category} renderItem={({ item }) => <Complete props={item} />} /> */}
+    {/* <FlatList data={category} renderItem={({ item }) => <Complete props={item} />} /> */ }
 
 
-        </View>
+        </View >
     )
 }
 

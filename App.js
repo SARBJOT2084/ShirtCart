@@ -7,6 +7,7 @@ import Tabs from './navigation/tabs';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import Product from './screens/Product';
+import Wishlist from './screens/Wishlist';
 
 export default function App() {
 
@@ -16,8 +17,8 @@ export default function App() {
 
       {/* <Home /> */}
       {/* <Login /> */}
-      <Product />
-
+      {/* <Product /> */}
+<Wishlist/>
 
       {/* <NavigationContainer style={{ marginTop: 'auto', }}>
         <Tabs />
