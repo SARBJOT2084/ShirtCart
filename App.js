@@ -17,8 +17,8 @@ export default function App() {
 
       {/* <Home /> */}
       {/* <Login /> */}
-      {/* <Product /> */}
-<Wishlist/>
+      <Product />
+{/* <Wishlist/> */}
 
       {/* <NavigationContainer style={{ marginTop: 'auto', }}>
         <Tabs />
