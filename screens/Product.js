@@ -5,8 +5,10 @@ import { Montserrat_400Regular } from '@expo-google-fonts/montserrat';
 import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
 function Box({ props }) {
     return (<View className="mx-3">
-        <Image source={{ 'uri': props.img }} className="w-40 h-48 rounded-t-lg" />
-        <Text className="rounded-b-lg bg-gray-300">{props.title}</Text>
+        <Image source={{ 'uri': props.img }} className="w-40 h-52 rounded-t-lg" />
+        <View className="bg-gray-200 h-9 rounded-b-lg text-md">
+            <Text className="my-auto mx-auto tracking-widest" style={{ fontFamily: 'Montserrat_400Regular' }}>{props.title}</Text>
+        </View>
     </View>)
 
 }
@@ -36,12 +38,24 @@ const Product = () => {
     const kids = [{
         id: 1,
         img: 'https://images.unsplash.com/photo-1624029769501-5a6cfec0d9e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGtpZHMlMjBjbG90aGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-        title: 'Kids',
+        title: 'Girls',
     }, {
         id: 2,
-        img: 'https://media.istockphoto.com/id/184847535/photo/standing-young-man.jpg?b=1&s=170667a&w=0&k=20&c=PXrb8juonm2iENeFtffkfikx51AQLdQmUzHVfbyZslo=',
-        title: 'Short',
+        img: 'https://images.unsplash.com/photo-1533512930330-4ac257c86793?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJveXMlMjBjaGlsZCUyMG1vZGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        title: 'Boys',
     }]
+    const warmer = [{
+        id: 1,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC82MONDBNRW2t69kh9Zco40k7X7s1QdFboQ&usqp=CAU',
+        title: 'Men',
+
+    },
+    {
+        id: 2,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKR_4VTtpDIvhVNvUAzJkA2NBcxpNC6DtDiQ&usqp=CAU',
+        title: 'Women',
+    }
+    ];
     let [fontsLoaded] = useFonts({
 
         Pacifico_400Regular, Montserrat_400Regular,
@@ -49,27 +63,33 @@ const Product = () => {
     if (!fontsLoaded) {
         return null;
     }
-    {/**category section */ }
     return (
 
         <View className="mt-[30%]" >
             <Text style={{ marginRight: 'auto', marginLeft: 'auto', fontFamily: 'Pacifico_400Regular', fontSize: 34, marginBottom: 34, }}>Categories</Text>
-            <ScrollView>
-                <Text style={{ fontFamily: 'Montserrat_400Regular' }}>Casual</Text>
+            <ScrollView className="h-[82%]">
+                <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>Casual</Text>
                 <FlatList data={casual} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
+                <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>Office</Text>
+
                 <FlatList data={office} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
-                <FlatList data={office} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
+                <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>Kids</Text>
+
+                <FlatList data={kids} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
+                <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>InnerWear</Text>
+
+                <FlatList data={warmer} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
 
             </ScrollView>
 
 
 
-            {/* <
-            <FlatList /> */}
-            {/* <FlatList data={category} renderItem={({ item }) => <Complete props={item} />} /> */}
 
 
-        </View >
+
+
+
+        </View>
     )
 }
 
