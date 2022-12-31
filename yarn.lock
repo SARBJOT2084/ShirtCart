@@ -1088,6 +1088,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/pacifico/-/pacifico-0.2.2.tgz#cfe3b1e57df2ca8223beef81f70e204da565be1b"
   integrity sha512-g3E+9jeYhebOt/6H03irmICZKHKl6B/BvXWIdgKgvw4tJuL0qrfePpjgNKGmxDWmt4HJ7Tq9fj1fdGN3ii9WQQ==
 
+"@expo-google-fonts/source-code-pro@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/source-code-pro/-/source-code-pro-0.2.2.tgz#7c5fb32371a5cc3ea52e542af6a1f478c43d0c95"
+  integrity sha512-4J8+vof8DJpgoWVnPbPhSad9tk3UO+VZRiUe+QKL8GxhBQ8zsXtsDJLHojJb7UgyDM6EBppqPxKVCgqbMlYrbA==
+
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.0.tgz#be0c1de943c7987a9fbd309ea0b1acd605890c7b"

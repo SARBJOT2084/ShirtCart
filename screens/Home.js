@@ -37,7 +37,7 @@ const Home = () => {
             <SafeAreaView>
                 <ScrollView className="h-[70%] mt-5" showsVerticalScrollIndicator={false}>
                     <ItemsSlider />
-                    <Categories />
+                    {/* <Categories /> */}
 
                     {/**Categories */}
                     <View className="flex flex-row"><Image source={{ uri: 'https://cdn-icons-png.flaticon.com/128/1685/1685230.png' }} className="h-16 w-16 mx-3" />
