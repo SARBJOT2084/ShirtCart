@@ -40,6 +40,7 @@ const User = () => {
             <Icon name="notifications-outline" size={23} />
             <Info />
             <FlatList data={data} renderItem={({ item }) => <Options props={item} />} horizontal showsHorizontalScrollIndicator={false} />
+
         </View>
     )
 }

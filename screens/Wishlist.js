@@ -1,7 +1,9 @@
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, FlatList } from 'react-native';
 import React from 'react';
 import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
-import { Montserrat_700Bold } from '@expo-google-fonts/montserrat';
+import { Montserrat_700Bold, Montserrat_400Regular } from '@expo-google-fonts/montserrat';
+import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
+import Icon from 'react-native-vector-icons/Feather';
 const data = [{
   id: 1,
   img: 'https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/81GnwNupdbL._UL1500_.jpg',
@@ -25,60 +27,62 @@ const data = [{
   des: 'Men Wool Bend',
 }
 ]
-
 function Box() {
   return (
-    <View className="w-full border-b-gray-400 border-2 h-44 flex flex-row">
+    <View className="w-full border-b-gray-400 border-b-2 h-36 flex flex-row">
       <View className="mr-auto ">
 
-        <Image source={{ uri: 'https://cdn.shopify.com/s/files/1/0606/8007/7463/products/50W7423_001_main_e6e4086e-5f44-4f3a-ae29-3feb37fcf81b_256x.jpg?v=1655128812' }} className="h-40 w-40" />
+        <Image source={{ uri: 'https://cdn.shopify.com/s/files/1/0606/8007/7463/products/50W7423_001_main_e6e4086e-5f44-4f3a-ae29-3feb37fcf81b_256x.jpg?v=1655128812' }} className="h-32 w-32" />
       </View>
       <View className="ml-auto">
         <Text className=" font-bold mr-10" style={{ fontFamily: 'sans-serif' }}>Vanhuesen</Text>
         <Text>Rs.5,990</Text>
+
+
+
+
       </View>
-
-
     </View>
   )
 }
 const Wishlist = () => {
   let [fontsLoaded] = useFonts({
-    Pacifico_400Regular, Montserrat_700Bold
+    Pacifico_400Regular, Montserrat_700Bold, Montserrat_400Regular
   });
   if (!fontsLoaded) {
     return null;
   }
   return (
-    <ScrollView>
+    <View>
+      <View className="h-[10%] mx-10 mt-[15%] flex flex-row">
+        <View className="mr-auto"><Icon name="arrow-left" size={25} /></View>
+        <View className="ml-auto space-x-2 flex flex-row"><Icon name="bell" size={25} /><Icon name="search" size={25} /></View>
+      </View>
+      <View className=" px-5 mb-[10%] border-b-black-2 fixed">
 
-      <View className="flex flex-row mt-[25%] px-5">
         <View className="mr-auto">
           <Text className="text-xl" style={{ fontFamily: 'Pacifico_400Regular' }} >
-            Your Wishlist
+            Your Wishlist&nbsp;&nbsp;❤️
           </Text>
+          <View className="w-full  flex flex-row justify-center mt-[15%]">
+            <View className="bg-black w-32 h-10 rounded-l-lg"><Text className="text-white mx-auto my-auto" style={{ fontFamily: 'Montserrat_400Regular' }}>All</Text></View>
+            <View className="bg-gray-200 w-32 h-10 rounded-r-lg"><Text className="mx-auto my-auto" style={{ fontFamily: 'Montserrat_400Regular' }}>Suggested</Text></View>
+          </View>
+
         </View>
 
-
       </View>
+      <ScrollView className="h-[65%]" showsVerticalScrollIndicator={false}>
+        <Box />
+        <Box />
+        <Box />
+        <Box />
+      </ScrollView>
 
 
 
+    </View>
 
-      <Box />
-      <Box />
-      <Box />
-
-      {/*Image,Price,detail,Decription */}
-      {/**Review Section*/}
-      <Box />
-      <Box />
-      <Box />
-
-
-
-    </ScrollView>
   )
 }
-
 export default Wishlist

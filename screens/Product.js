@@ -81,15 +81,7 @@ const Product = () => {
                 <FlatList data={warmer} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
 
             </ScrollView>
-
-
-
-
-
-
-
-
-        </View>
+</View>
     )
 }
 
