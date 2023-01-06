@@ -1088,6 +1088,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/pacifico/-/pacifico-0.2.2.tgz#cfe3b1e57df2ca8223beef81f70e204da565be1b"
   integrity sha512-g3E+9jeYhebOt/6H03irmICZKHKl6B/BvXWIdgKgvw4tJuL0qrfePpjgNKGmxDWmt4HJ7Tq9fj1fdGN3ii9WQQ==
 
+"@expo-google-fonts/roboto@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/roboto/-/roboto-0.2.2.tgz#0a9f4685e8d02bdb0d2d2919c102f531bdb353d4"
+  integrity sha512-qP0oZsR8rTID5T9wEXSt9yCYMnKYKlvIlrJGGpd+t71Obt2J51+51PBpvxd5c8fpABEru3zx6ENmpU9lzwr8zw==
+
 "@expo-google-fonts/source-code-pro@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/source-code-pro/-/source-code-pro-0.2.2.tgz#7c5fb32371a5cc3ea52e542af6a1f478c43d0c95"
