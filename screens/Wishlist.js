@@ -47,41 +47,25 @@ function Box({ props }) {
           <Text className="text-xs " style={{ fontFamily: 'Roboto_400Regular', }}>{props.des}</Text>
         </View>
         <View className="my-auto w-full">
-          <Text>4.5 ratings</Text>
           <View className="flex flex-row space-x-3">
-            <View>
-              <Icon2 name="star" size={21} style={{ color: "#FFC300", }} />
-
-            </View>
-            <View>
-              <Icon2 name="star" size={21} style={{ color: "#FFC300", }} />
-
-            </View>
-            <View>
-              <Icon2 name="star" size={21} style={{ color: "#FFC300", }} />
-
-            </View>
-            <View>
-              <Icon2 name="star" size={21} style={{ color: "#FFC300", }} />
-
-            </View>
-            <View>
-              <Icon2 name="star-half" size={21} style={{ color: "#FFC300", }} />
-            </View>
+            <Text className="font-extrabold text-md line-through">Rs.3599</Text>
+            <Text className="font-bold">Rs.2520</Text>
           </View>
-        </View>
-        <View className="mt-auto w-full">
-          <Pressable style={{ backgroundColor: 'black', borderRadius: 5, height: 30, }}>
-            <Text className="text-white mx-auto my-auto">Add to Cart</Text>
-          </Pressable>
+          <Text className="text-green-600 text-xs">30%off</Text>
 
         </View>
-        <View className="mt-auto w-full mb-2">
-          <Pressable style={{ backgroundColor: '#E5E7EB', borderRadius: 5, height: 30, }}>
+        <View className="mt-auto w-full space-y-1 mb-1">
+          <Pressable style={{ borderRadius: 20, height: 30, borderWidth: 2, }} onPress={() => { console.log("Added to Bag!!!") }}>
+            <Text className=" mx-auto my-auto">Add to Bag</Text>
+          </Pressable>
+          <View>
+
+          </View>
+          <Pressable style={{ backgroundColor: '#E5E7EB', borderRadius: 20, height: 30, }} onPress={() => { console.log("Removed ") }}>
             <Text className="mx-auto my-auto">Remove </Text>
           </Pressable>
-
         </View>
+
       </View>
     </View>
   )
