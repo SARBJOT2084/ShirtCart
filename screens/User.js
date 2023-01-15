@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 function Info() {
     return (<View className="pt-[20%] px-[10%]">
         <View className="flex flex-row">
-            <View className="mr-auto">
+            <View className="mr-auto fixed">
                 <Text className="text-xl font-bold">Hello,Aman</Text>
             </View>
             <View className="ml-auto">
@@ -85,33 +85,42 @@ function UpcomingOrders() {
                 <Text className="text-xs">S Men Shirt 998</Text>
                 <Text className="text-xs text-green-600">Arriving by Tuesday</Text>
                 <Text className="text-xs">at Mohali,140308</Text>
-                <Pressable onPress={() => { console.log("Track order!!!!") }} className="h-12 border-2 border-gray-400 rounded"><Text className="my-auto mx-auto">Track Order</Text></Pressable>
+                <Pressable onPress={() => { console.log("Track order!!!!") }} className="h-12 border-2 border-gray-400 rounded mt-2"><Text className="my-auto mx-auto">Track Order</Text></Pressable>
             </View>
         </View>
     </View>)
 }
 function Settings({ props }) {
     return (
-        <View className="border-2 border-gray-400 w-4/5 mx-auto h-1/6">
-            <Text className="text-lg">{props.text}</Text>
+
+        <View className="border-b-2 border-b-gray-200 w-11/12 mx-auto">
+            <Text className="text-lg ml-5">{props.text}</Text>
         </View>);
 }
 const User = () => {
     return (
-        <View>
-            <ScrollView>
-                <Info />
 
-                <FlatList data={data} renderItem={({ item }) => <Options props={item} />} horizontal showsHorizontalScrollIndicator={false} className="mx-auto" />
-                <FlatList data={data2} renderItem={({ item }) => <Options props={item} />} horizontal showsHorizontalScrollIndicator={false} className="mx-auto" />
-                {/**Orders which are coming  */}
-                <UpcomingOrders />
-                {options.map((item) => (<Text className="text-lg">{item.text}</Text>))}
-            </ScrollView>
 
-            {/* <FlatList data={options} renderItem={({ item }) => <Settings props={item} />} className="w-full h-23" /> */}
 
-        </View>
+
+
+        <ScrollView>
+            <Info />
+            <FlatList data={data} renderItem={({ item }) => <Options props={item} />} horizontal showsHorizontalScrollIndicator={false} className="mx-auto" />
+            <FlatList data={data2} renderItem={({ item }) => <Options props={item} />} horizontal showsHorizontalScrollIndicator={false} className="mx-auto" />
+            {/**Orders which are coming  */}
+            <UpcomingOrders />
+
+
+
+            <Text className="text-lg ml-[5%] font-bold">Account Settings</Text>
+
+            <View className="border-gray-200 border-2 w-11/12 mx-auto rounded-2xl">
+                {options.map((item) => (<Text className="text-lg  border-b-2 border-b-gray-200 w-full" key={item.id}>{item.text}</Text>))}
+            </View>
+
+
+        </ScrollView>
     )
 }
 
