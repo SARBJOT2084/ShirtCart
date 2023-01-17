@@ -33,7 +33,7 @@ const Home = () => {
         <View>
             <Navbar />
             {/**Image Carosuel */}
-
+            
             <SafeAreaView>
                 <ScrollView className="h-[70%] mt-5" showsVerticalScrollIndicator={false}>
                     <ItemsSlider />
