@@ -31,7 +31,6 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-
     <NavigationContainer >
       <Tab.Navigator
         screenOptions={({ route }) => ({
@@ -53,7 +52,7 @@ export default function App() {
             else if (route.name === 'User') {
 
               if (focused) {
-                return <FontAwesome name="user" size={25} color="rgb(244,63,94)" />
+                return <FontAwesome name="user" size={27} color="rgb(244,63,94)" />
               }
               return <FontAwesome name="user-o" size={25} />
             }
@@ -65,7 +64,7 @@ export default function App() {
             }
             else {
               if (focused) {
-                return <P name="cart" size={25} color="rgb(244,63,94)" />
+                return <P name="cart" size={25} color="rgb(244,63,94)" style={{ borderBottomColor: 'blue', }} />
               }
               return <P name="cart-outline" size={25} />
             }
@@ -95,5 +94,6 @@ export default function App() {
 
       </Tab.Navigator>
     </NavigationContainer>
+
   );
 }
