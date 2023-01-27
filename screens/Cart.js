@@ -33,7 +33,7 @@ const Cart = () => {
       </View>
       <View className="h-[15%] bg-rose-500">
         <Text className="mx-auto my-auto text-white text-md">
-          Your Items
+          Your Items 
         </Text>
       </View>
       {/**Vanhuesen,Allen Solly,Nike Sweatshirt, */}
