@@ -14,9 +14,9 @@ const Navbar = () => {
                 <View className="mr-auto">
                     <Image source={require('../assets/logo.png')} className="h-28 w-28" />
                 </View>
-                <View className="ml-auto my-[8%]">
+                <View className="ml-auto my-[7%]">
                     <Image source={{ uri: 'https://tse3.mm.bing.net/th?id=OIP.QkSJibSZK5yLbcN_F7OxIgHaHa&pid=Api&P=0' }}
-                        className="w-12 h-12 rounded-lg "
+                        className="w-12 h-10 rounded-lg "
                     />
                 </View>
             </View>

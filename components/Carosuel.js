@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, FlatList, Image, Dimensions } from 'react-native'
 import React from 'react'
-const { width, height } = Dimensions.get('screen');
+const height = Dimensions.get('screen').height;
+const width = Dimensions.get('screen').width;
+
 const data = [
     {
         id: 1,
@@ -19,19 +21,23 @@ const data = [
 ]
 const Photo = ({ props }) => {
     return (
-        <View className="h-[20%] my-auto w-full">
-            <Image source={{ uri: props.url }} className="h-full w-full" />
-        </View>
+
+        <Image source={{ uri: props.url }} className="rounded-lg" style={styles.container} resizeMode="stretch" />
+
+
     )
 }
 
 
 const Carosuel = () => {
     return (
-        <View className="w-full h-full">
+        <View className="w-full h-[28%]">
 
             <FlatList data={data} renderItem={({ item }) => <Photo props={item} />}
-                className="w-full h-full"
+                horizontal
+                className="w-11/12 mx-auto h-full text-center"
+                showsHorizontalScrollIndicator={false}
+                snapToAlignment="center"
             />
         </View>
     )
@@ -40,8 +46,9 @@ const Carosuel = () => {
 export default Carosuel;
 const styles = StyleSheet.create({
     container: {
-        width,
-        height,
-        alignItems: 'center',
+        height: '100%',
+        width: width * 0.91677,
+        marginRight: 10,
+
     }
 });

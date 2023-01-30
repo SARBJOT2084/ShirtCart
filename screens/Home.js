@@ -5,15 +5,20 @@ import Searchbar from '../components/Searchbar';
 import Carosuel from '../components/Carosuel';
 
 
-{/**Navbar(60%),Searchbar(22%), */ }
+{/**Navbar(15%),Searchbar(7%),  */ }
 
 const Home = () => {
     return (
         <KeyboardAvoidingView className="h-full">
+
             <Navbar />
             <Searchbar />
-            <Carosuel />
+                    <Carosuel />
+
             
+
+
+
             {/* <Image source={{ uri: 'https://imagescdn.vanheusenindia.com/img/app/shopmedia/production/6/6-25-11661.jpg?w=1473&auto=format,compress' }} resizeMode="stretch" className="w-11/12 mx-auto h-32  " /> */}
         </KeyboardAvoidingView>
     )
