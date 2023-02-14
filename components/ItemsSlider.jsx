@@ -47,7 +47,7 @@ function Box({ props }) {
 }
 const ItemsSlider = () => {
     return (
-        <View className="mt-[10%] fixed">
+        <View className="my-[5%] fixed">
             <FlatList data={Items} renderItem={({ item }) => <Box props={item} />} horizontal snapToAlignment="center" showsHorizontalScrollIndicator={false} className="fixed" />
         </View>
     )

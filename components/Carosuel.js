@@ -15,8 +15,7 @@ const data = [
         url: 'https://imagescdn.vanheusenindia.com/img/app/shopmedia/production/6/6-25-11661.jpg?w=703&auto=format,compress',
     }, {
         id: 4,
-        url: 'https://lp2.hm.com/hmgoepprod?set=width[1440],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/global_campaigns/season_07/ladies/1047h/1047H-3x2-new-season-edit.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]',
-
+        url: 'https://images.bestsellerclothing.in/live/image/catalog/brandstore/veromoda/banners/1_1920x650-d.jpg?width=1920&height=650&mode=fill&fill=blur&format=auto',
     }
 ]
 const Photo = ({ props }) => {
@@ -27,7 +26,6 @@ const Photo = ({ props }) => {
 
     )
 }
-
 
 const Carosuel = () => {
     return (
@@ -46,7 +44,7 @@ const Carosuel = () => {
 export default Carosuel;
 const styles = StyleSheet.create({
     container: {
-        height: '100%',
+        height: '90%',
         width: width * 0.91677,
         marginRight: 10,
 
