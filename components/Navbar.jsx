@@ -8,7 +8,7 @@ import Icon1 from 'react-native-vector-icons/MaterialIcons';
 const Navbar = () => {
 
     return (
-        <View className="w-full h-[15%] fixed bg-gray-500 z-50">
+        <View className="w-full h-[15%] fixed z-50">
             <View className="mx-[6%] my-[8%] flex flex-row">
 
                 <View className="mr-auto">

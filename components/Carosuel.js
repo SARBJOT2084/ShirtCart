@@ -21,7 +21,7 @@ const data = [
 const Photo = ({ props }) => {
     return (
 
-        <Image source={{ uri: props.url }} className="rounded-lg" style={styles.container} resizeMode="stretch" />
+        <Image source={{ uri: props.url }} className="rounded-lg " style={styles.container} resizeMode="stretch" />
 
 
     )
@@ -29,13 +29,14 @@ const Photo = ({ props }) => {
 
 const Carosuel = () => {
     return (
-        <View className="w-full h-[28%]">
+        <View className="w-full h-48">
 
             <FlatList data={data} renderItem={({ item }) => <Photo props={item} />}
                 horizontal
-                className="w-11/12 mx-auto h-full text-center"
+                className="w-[11/12] mx-auto h-full text-center"
                 showsHorizontalScrollIndicator={false}
                 snapToAlignment="center"
+
             />
         </View>
     )
@@ -44,9 +45,8 @@ const Carosuel = () => {
 export default Carosuel;
 const styles = StyleSheet.create({
     container: {
-        height: '90%',
+        height: '100%',
         width: width * 0.91677,
         marginRight: 10,
-
     }
 });
