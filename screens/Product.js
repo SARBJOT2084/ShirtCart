@@ -67,7 +67,7 @@ const Product = () => {
 
         <View className="mt-[30%]" >
             <Text style={{ marginRight: 'auto', marginLeft: 'auto', fontFamily: 'Pacifico_400Regular', fontSize: 34, marginBottom: 34, }}>Categories</Text>
-            <ScrollView className="h-[82%]">
+            <ScrollView className="h-[82%]" showsVerticalScrollIndicator={false}>
                 <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>Casual</Text>
                 <FlatList data={casual} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
                 <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>Office</Text>

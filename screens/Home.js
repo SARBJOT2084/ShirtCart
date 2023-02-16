@@ -6,6 +6,7 @@ import Carosuel from '../components/Carosuel';
 import ItemsSlider from '../components/ItemsSlider';
 import Brands from '../components/Brands';
 import Sale from '../components/Sale';
+import Recent from '../components/Recent';
 
 {/**Navbar(15%),Searchbar(7%),  */ }
 
@@ -19,11 +20,8 @@ const Home = () => {
                 <ItemsSlider />
                 <Carosuel />
                 <Sale />
-                {/* <Brands /> */}
-                {/* <Carosuel /> */}
-                {/*Top Brands */}
-
-                {/*Sale */}
+                <Brands />
+                {/* <Recent /> */}
                 {/**New Launch */}
                 {/*Categories Selection */}
                 {/**Items you may like */}

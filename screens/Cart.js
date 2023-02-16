@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView } from 'react-native'
+import { View, Text, Image, ScrollView, FlatList } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Feather';
 const data = [
@@ -8,42 +8,54 @@ const data = [
   },
   {
     id: 2,
-    des: '',
+    des: 'Polo Shirt',
   },
   {
     id: 3,
-    des: '',
+    des: "Zara Men's shirt",
   }
 ]
-function Box(props) {
-  return <View className="w-full h-[40%] py-9 border-b-2 border-b-gray-300">
-    <View className="flex flex-row mx-[10%]">
-      <View className="mr-auto"><Text className="text-lg font-bold">{props.text}</Text></View>
-    </View>
-  </View>
+function Box({ props }) {
+  return <Text>
+    {props.des}
+  </Text>
 }
 const Cart = () => {
   return (
-    <View>
+    <View className="h-full w-full">
       {/**Your cart is empty or else it is has items */}
       {/**Making  */}
-      <View className="px-[5%] py-[5%] w-full h-[15%] flex flex-row">
-        <View className="mr-auto"><Image source={require("../assets/logo.png")} className="h-20 w-20" /></View>
+      <View className="h-[15%] flex flex-row">
+        <View className="mr-auto my-auto flex flex-row space-x-3">
+          <View className="my-auto  ">
+            <Icon name="arrow-left" size={23} />
+          </View>
+          <View>
+            <Image source={require('../assets/logo.png')} className="h-[90%] w-20 my-auto" />
+
+          </View>
+        </View>
+        <View className="ml-auto my-auto flex flex-row space-x-3">
+          <Icon name="bell" size={23} />
+          <Icon name="search" size={23} />
+
+        </View>
 
       </View>
-      <View className="h-[15%] bg-rose-500">
-        <Text className="mx-auto my-auto text-white text-md">
-          Your Items 
-        </Text>
+      <View className="bg-rose-500 h-[10%] w-full">
+        <Text className="m-auto text-white">Your Items</Text>
       </View>
-      {/**Vanhuesen,Allen Solly,Nike Sweatshirt, */}
-      <ScrollView className="h-[65%]">
-        <Box text="Vanhusen"/>
-        <Box text="Allen Solly"/>
-        <Box text="Nike"/>
-        <Box text="Puma"/>
-       
+      <ScrollView className="h-[75%]">
+        <FlatList
+          data={data}
+          renderItem={({ item }) => <Box props={item} />}
+
+        />
       </ScrollView>
+
+
+      {/**Vanhuesen,Allen Solly,Nike Sweatshirt, */}
+
 
     </View>
 
