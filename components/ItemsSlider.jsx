@@ -2,23 +2,28 @@ import { View, Text, ScrollView, Image, FlatList } from 'react-native'
 import React from 'react'
 const Items = [
     {
-        id: 1,
+        id: 0,
+        text: 'Top Deals',
         url: 'https://cdn-icons-png.flaticon.com/512/2977/2977922.png',
+    },
+    {
+        id: 1,
         text: 'Men',
+        url: 'https://cdn-icons-png.flaticon.com/512/2957/2957379.png',
     },
     {
         id: 2,
-        url: 'https://cdn-icons-png.flaticon.com/512/2957/2957379.png',
+        url: 'https://cdn-icons-png.flaticon.com/128/4273/4273374.png',
         text: 'Women',
     },
     {
         id: 3,
-        url: 'https://cdn-icons-png.flaticon.com/128/3345/3345385.png',
+        url: 'https://cdn-icons-png.flaticon.com/128/542/542608.png',
         text: 'Inner',
     },
     {
         id: 4,
-        url: 'https://cdn-icons-png.flaticon.com/128/4378/4378432.png',
+        url: 'https://t4.ftcdn.net/jpg/03/31/37/29/240_F_331372982_NK7FduAVUNsOheXqBvDgRzdUH9Mo9YCN.jpg',
         text: 'Party',
     }
     , {
@@ -33,7 +38,7 @@ const Items = [
     },
     {
         id: 7,
-        url: 'https://cdn-icons-png.flaticon.com/512/570/570223.png',
+        url: 'https://cdn-icons-png.flaticon.com/128/5996/5996522.png',
         text: 'More'
     }
 
