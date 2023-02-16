@@ -15,7 +15,7 @@ const Home = () => {
 
             <Navbar />
             <Searchbar />
-            <ScrollView className="h-[78%]" showsHorizontalScrollIndicator={false}>
+            <ScrollView className="h-[78%]" showsVerticalScrollIndicator={false}>
                 <ItemsSlider />
                 <Carosuel />
                 <Sale />

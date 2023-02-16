@@ -1,10 +1,5 @@
-import { View, Text, Image } from 'react-native'
-import React from 'react'
-import Icon from 'react-native-vector-icons/Ionicons';
-import Searchbar from './Searchbar';
-import ItemsSlider from './ItemsSlider';
-import Icon1 from 'react-native-vector-icons/MaterialIcons';
-{/**60% */ }
+import { View, Image } from 'react-native'
+import React from 'react';
 const Navbar = () => {
 
     return (
