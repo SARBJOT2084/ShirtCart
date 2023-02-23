@@ -1,14 +1,10 @@
-import { View, Text, Image, ScrollView, TouchableOpacity, FlatList } from 'react-native'
+import { View, Text, Image, ScrollView } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Feather';
 import CartItems from '../components/CartItems';
-
-
-
 const Cart = () => {
   return (
     <View className="h-full w-full">
-
       <View className="h-[15%] flex flex-row">
         <View className="mr-auto my-auto flex flex-row space-x-3">
           <View className="my-auto  ">
@@ -16,13 +12,11 @@ const Cart = () => {
           </View>
           <View>
             <Image source={require('../assets/logo.png')} className="h-[90%] w-20 my-auto" />
-
           </View>
         </View>
         <View className="ml-auto my-auto flex flex-row space-x-3">
           <Icon name="bell" size={23} />
           <Icon name="search" size={23} />
-
         </View>
 
       </View>

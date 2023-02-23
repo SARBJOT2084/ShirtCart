@@ -4,7 +4,6 @@ import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
 import { Montserrat_700Bold, Montserrat_400Regular, Montserrat_500Medium } from '@expo-google-fonts/montserrat';
 import { Roboto_400Regular } from '@expo-google-fonts/roboto';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
-import Icon2 from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/SimpleLineIcons';
 import Icon from 'react-native-vector-icons/Feather';
 const data = [{
