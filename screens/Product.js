@@ -1,8 +1,10 @@
-import { View, Text, FlatList, Image, ScrollView } from 'react-native'
+import { Platform,SafeAreaContext,View, Text, FlatList, Image, ScrollView, StatusBar } from 'react-native';
+
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { Montserrat_400Regular } from '@expo-google-fonts/montserrat';
 import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
+import Feather from 'react-native-vector-icons/Feather';
 function Box({ props }) {
     return (<View className="mx-3">
         <Image source={{ 'uri': props.img }} className="w-40 h-52 rounded-t-lg" />
@@ -64,22 +66,28 @@ const Product = () => {
         return null;
     }
     return (
+        <View style={{height:'100%',paddingTop:Platform.OS==='android'?StatusBar.currentHeight:0}}>
+            <View className="h-[5%] flex flex-row mx-4">
+                <View className="mr-auto"><Feather name="arrow-left" size={24}/></View>
+                <View className="ml-auto"><Feather name="search" size={24}/></View>
+            </View>
+            <View className="h-[15%]">
+            <Text style={{ marginRight: 'auto', marginLeft: 'auto', fontFamily: 'Pacifico_400Regular', fontSize: 33,}}>Categories</Text>
+            </View>
+       
 
-        <View className="mt-[30%]" >
-            <Text style={{ marginRight: 'auto', marginLeft: 'auto', fontFamily: 'Pacifico_400Regular', fontSize: 34, marginBottom: 34, }}>Categories</Text>
-            <ScrollView className="h-[82%]" showsVerticalScrollIndicator={false}>
+            <ScrollView className="h-[80%] w-full" showsVerticalScrollIndicator={false}>
                 <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>Casual</Text>
                 <FlatList data={casual} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
                 <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>Office</Text>
-
                 <FlatList data={office} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
                 <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>Kids</Text>
-
-                <FlatList data={kids} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
+                <Text className="w-full"> <FlatList data={kids} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} /></Text>
+               
                 <Text style={{ fontFamily: 'Montserrat_400Regular', marginLeft: 5, fontSize: 23, }}>InnerWear</Text>
-
+                <Text className="w-full">
                 <FlatList data={warmer} renderItem={({ item }) => <Box props={item} />} horizontal className="mx-auto w-full my-5" showsHorizontalScrollIndicator={false} />
-
+                </Text>
             </ScrollView>
 </View>
     )

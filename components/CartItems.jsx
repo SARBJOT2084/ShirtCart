@@ -48,11 +48,12 @@ const Box = ({ props }) => {
 const CartItems = () => {
     return (
         <View>
-            <FlatList
+            {/* <FlatList
                 data={data}
                 renderItem={({ item }) => <Box props={item} />}
 
-            />
+            /> */}
+            {data.map((item)=><Box props={item} key={item.id}/>)}
         </View>
     )
 }
