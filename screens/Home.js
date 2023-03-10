@@ -23,7 +23,7 @@ const Home = () => {
                 <Carosuel />
                 <Sale />
                 <Brands />
-                
+
                 {/* <Recent /> */}
                 {/**New Launch */}
                 {/*Categories Selection */}
@@ -33,7 +33,6 @@ const Home = () => {
             </ScrollView>
             {/* <Image source={{ uri: 'https://imagescdn.vanheusenindia.com/img/app/shopmedia/production/6/6-25-11661.jpg?w=1473&auto=format,compress' }} resizeMode="stretch" className="w-11/12 mx-auto h-32  " /> */}
             {/**Top Categories,Brands */}
-
         </View>
     )
 }

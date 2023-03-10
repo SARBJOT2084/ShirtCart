@@ -7,7 +7,7 @@ const Sale = () => {
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
   
-    const deadline = "February, 28, 2023";
+    const deadline = "March, 15, 2023";
   
     const getTime = () => {
       const time = Date.parse(deadline) - Date.now();
