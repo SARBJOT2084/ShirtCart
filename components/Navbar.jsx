@@ -1,8 +1,8 @@
-import { View, Image } from 'react-native'
+import { View, Image ,Text} from 'react-native'
 import React from 'react';
 const Navbar = () => {
     return (
-        <View className="w-full h-[15%] fixed z-50">
+        <View className="w-full h-[20%] fixed z-50 ">
             <View className="mx-[6%] my-[8%] flex flex-row">
 
                 <View className="mr-auto">
@@ -13,7 +13,9 @@ const Navbar = () => {
                         className="w-12 h-10 rounded-lg "
                     />
                 </View>
+
             </View>
+       
         </View>
     )
 }

@@ -14,7 +14,7 @@ if (!fontsLoaded) {
 }
   return (
     <SafeAreaView style={{height:'100%',paddingTop:Platform.OS==='android'?StatusBar.currentHeight:0}}>
-    <View className="h-[10%] flex flex-row space-x-3">
+    <View className="h-[10%] flex flex-row space-x-3 px-3">
           <View className="my-auto">
             <Icon name="arrow-left" size={23} />
           </View>

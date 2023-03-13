@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView, FlatList } from 'react-native';
+import { View, Text, Image, ScrollView, FlatList ,TouchableOpacity} from 'react-native';
 import React from 'react';
 import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
 import { Montserrat_700Bold, Montserrat_400Regular, Montserrat_500Medium } from '@expo-google-fonts/montserrat';
@@ -54,15 +54,15 @@ function Box({ props }) {
 
         </View>
         <View className="mt-auto w-full space-y-1 mb-1">
-          <Pressable style={{ borderRadius: 20, height: 30, borderWidth: 2, }} onPress={() => { console.log("Added to Bag!!!") }}>
+          <TouchableOpacity  style={{ borderRadius: 20, height: 30, borderWidth: 2, }} onPress={() => { console.log("Added to Bag!!!") }}>
             <Text className=" mx-auto my-auto">Add to Bag</Text>
-          </Pressable>
+          </TouchableOpacity>
           <View>
 
           </View>
-          <Pressable style={{ backgroundColor: '#E5E7EB', borderRadius: 20, height: 30, }} onPress={() => { console.log("Removed ") }}>
+          <TouchableOpacity style={{ backgroundColor: '#E5E7EB', borderRadius: 20, height: 30, }} onPress={() => { console.log("Removed ") }}>
             <Text className="mx-auto my-auto">Remove </Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
 
       </View>

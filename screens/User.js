@@ -1,6 +1,7 @@
 import { View, Text, Image, FlatList, Pressable, ScrollView } from 'react-native'
 import React from 'react'
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/Feather';
+
 function Info() {
     return (<View className="pt-[20%] px-[10%]">
         <View className="flex flex-row">
@@ -110,7 +111,7 @@ const User = () => {
 
             <Text className="text-lg ml-[5%] font-bold">Account Settings</Text>
             <View className="border-gray-200 border-2 w-11/12 mx-auto rounded-2xl">
-                {options.map((item) => (<Text className="text-lg  border-b-2 border-b-gray-200 w-full" key={item.id}>{item.text}</Text>))}
+                {options.map((item) => (<View className="text-lg  border-b-2 border-b-gray-200 mx-4  flex flex-row" key={item.id}><Text className="mr-auto">{item.text}</Text><Text className="ml-auto"><Icon name="arrow-right" size={20}/></Text></View>))}
             </View> 
 
 
